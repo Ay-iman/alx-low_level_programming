@@ -6,10 +6,13 @@
 
 
 
-/* betty style doc for function main goes there */
+/**
+ *main - recevies no argument
+ *
+ *Return: Always 0 (succes)
+ */
 
-int main(void) /* this is the main function */
-
+int main(void) 
 {
 	int n;
 
