@@ -2,33 +2,34 @@
 
 /**
  * main - prints all possible different combinations of three digits
- * Return: 0
+ * using putchar
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n1 = 48;
-	int n2, n3;
-	int com = 44;
+	int n, m, l;
 
-	while (n1 <= 57)
+	for (n = 48; n < 58; n++)
 	{
-		n2 = n1 + 1;
-		while (n2 <= 57)
+		for (m = 49; m <= 58; m++)
 		{
-			putchar(n1);
-			putchar(n2);
-			putchar(n3);
-			if (n1 != 53 || n2 != 56 || n3 != 57)
+			for (l = 50; l < 58; l++)
 			{
-				putchar(com);
-				putchar(32);
+				if (l > m && m > n)
+
+				{
+					putchar(n);
+					putchar(m);
+					putchar(l);
+					if (n != 55 || m != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
-			n3 += 1;
 		}
-		n2 += 1;
 	}
-	n1 += 1;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
