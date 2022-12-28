@@ -1,38 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - prints combination of integers
- *
- * Return: Always (0) (Success)
+ * main - prints all possible different combinations of two digits
+ * using putchar
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int x = 48;
-	int y = 48;
+	int n, m;
 
-	while (x < 58)
+	for (n = 48; n <= 56; n++)
 	{
-		y = 48;
-		while(y < 58)
+		for (m = 49; m <= 57; m++)
 		{
-			if ((x != y) && (x < y))
+			if (m > n)
 			{
-				putchar(x);
-				putchar(y);
-				if((x != 57) && (y != 56))
+				putchar(n);
+				putchar(m);
+				if (n != 56 || m != 57)
 				{
 					putchar(',');
 					putchar(' ');
 				}
-				else
-				{
-					break;
-				}
 			}
-			y++;
 		}
-		x++;
 	}
-
+	putchar('\n');
 	return (0);
 }
