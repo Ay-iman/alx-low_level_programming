@@ -1,35 +1,38 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 00 to 89.
+ * main - prints combination of integers
  *
- * Return: 0
+ * Return: Always (0) (Success)
  */
 int main(void)
 {
-	int i, e;
+	int x = 48;
+	int y = 48;
 
-	i = 48;
-	e = 48;
-	while (e < 58)
+	while (x < 58)
 	{
-		i = 48;
-		while (i < 58)
+		y = 48;
+		while(y < 58)
 		{
-			if (e != i && e < i)
+			if ((x != y) && (x < y))
 			{
-				putchar(e);
-				putchar(i);
-				if (i == 57 && e == 56)
+				putchar(x);
+				putchar(y);
+				if((x != 57) && (y != 56))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				else
 				{
 					break;
 				}
-				putchar(',');
-				putchar(' ');
 			}
-			i++;
+			y++;
 		}
-		e++;
+		x++;
 	}
-	putchar('\n');
+
 	return (0);
+}
