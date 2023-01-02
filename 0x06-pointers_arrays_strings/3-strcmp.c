@@ -1,29 +1,19 @@
 #include "main.h"
 
 /**
- * _strncpy - cpoies n bytes of src to the dest string
+ * _strcmp - compares two strings
  *
- * @dest: string to copy to
- * @src: string being copied
- * @n: largest number of bytes to copy
+ * @s1: first string
+ * @s2: second string
  *
- * Return: address of dest
+ * Return: outputs the difference of s1 and s2
  */
 
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
-	while (i < n && *(src + i))
-	{
-		*(dest + i) = *(src + i);
+	while (*(s1 + i) && *(s2 + i) && (*(s1 + i) == *(s2 + i)))
 		i++;
-	}
-	while (i < n)
-	{
-		*(dest + i) = '\0';
-		i++;
-	}
-	return (dest);
+	return (*(s1 + i) - *(s2 + i));
 }
