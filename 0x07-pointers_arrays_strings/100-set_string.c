@@ -1,16 +1,30 @@
 #include "main.h"
 
 /**
- * set_string - sets the value of a pointer to a char
- * @s: source adress.
- * @to: target adress.
- * Return: no return.
+ * print_rev - Prints a string in reverse.
+ * @s: string to tbe reserved.
  */
 
-void set_string(char **s, char *to)
+void print_rev(char *s)
 
 {
 
-	*s = to;
+	int len = 0, i = 0;
+
+
+
+	while (s[i++])
+
+		len++;
+
+
+
+	for (i = len - 1; i >= 0; i--)
+
+		_putchar(s[i]);
+
+
+
+	_putchar('\n');
 
 }
