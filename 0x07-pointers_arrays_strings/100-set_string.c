@@ -1,30 +1,13 @@
 #include "main.h"
 
 /**
- * print_rev - Prints a string in reverse.
- * @s: string to tbe reserved.
+ * set_string - sets the value of a pointer to a char
+ * @s: pointer to change
+ * @to: string to change pointer to
+ *
+ * Return: void
  */
-
-void print_rev(char *s)
-
+void set_string(char **s, char *to)
 {
-
-	int len = 0, i = 0;
-
-
-
-	while (s[i++])
-
-		len++;
-
-
-
-	for (i = len - 1; i >= 0; i--)
-
-		_putchar(s[i]);
-
-
-
-	_putchar('\n');
-
+	*s = to;
 }
